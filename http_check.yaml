@@ -2,9 +2,6 @@ init_config:
 
 docker_images:
   - galileo-frontend
-  - galileo-api
-  - galileo-collector
-  - mashape-id
 
 init_config:
 
@@ -18,7 +15,12 @@ instances:
     tags:
       - application:galileo-frontend
 
+docker_images:
+  - mashape-id
 
+init_config:
+
+instances:
   - name: Mashape ID frontend http check
     url: http://HOST:3001/version
     timeout: 5
@@ -28,6 +30,12 @@ instances:
     tags:
       - application:mashape-id
 
+docker_images:
+  - galileo-api
+
+init_config:
+
+instances:
   - name: Galileo API http check
     url: http://HOST:10000/health
     timeout: 5
@@ -37,6 +45,12 @@ instances:
     tags:
       - application:galileo-api
 
+docker_images:
+  - galileo-collector
+
+init_config:
+
+instances:
   - name: Galileo Collector http check
     url: http://HOST:10002/health
     timeout: 5
