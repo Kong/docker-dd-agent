@@ -9,4 +9,4 @@ chmod +x /entrypoint.sh
 
 # Add MySQL check configuration
 ADD http_check.yaml /etc/dd-agent/conf.d/auto_conf/http_check.yaml
-
+ADD nginx.yaml /etc/dd-agent/conf.d/auto_conf/nginx.yaml
