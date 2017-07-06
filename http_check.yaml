@@ -12,6 +12,9 @@ instances:
 
     collect_response_time: true
     skip_event: true
+    tags:
+      - application:galileo-frontend
+
 
   - name: Mashape ID frontend
     url: http://HOST:3001/version
@@ -19,6 +22,8 @@ instances:
 
     collect_response_time: true
     skip_event: true
+    tags:
+      - application:mashape-id
 
   - name: Galileo API
     url: http://HOST:10000/health
@@ -26,6 +31,8 @@ instances:
 
     collect_response_time: true
     skip_event: true
+    tags:
+      - application:galileo-api
 
   - name: Galileo Collector
     url: http://HOST:10002/health
@@ -33,3 +40,5 @@ instances:
 
     collect_response_time: true
     skip_event: true
+    tags:
+      - application:galileo-collector
