@@ -5,5 +5,3 @@ docker_images:
 
 instances:
   - nginx_status_url: http://HOST:10003/status
-    tags:
-      - application:galileo-frontend

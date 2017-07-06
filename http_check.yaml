@@ -9,7 +9,7 @@ docker_images:
 init_config:
 
 instances:
-  - name: Galileo frontend
+  - name: Galileo frontend http check
     url: http://HOST:10003/health
     timeout: 5
 
@@ -19,7 +19,7 @@ instances:
       - application:galileo-frontend
 
 
-  - name: Mashape ID frontend
+  - name: Mashape ID frontend http check
     url: http://HOST:3001/version
     timeout: 5
 
@@ -28,7 +28,7 @@ instances:
     tags:
       - application:mashape-id
 
-  - name: Galileo API
+  - name: Galileo API http check
     url: http://HOST:10000/health
     timeout: 5
 
@@ -37,7 +37,7 @@ instances:
     tags:
       - application:galileo-api
 
-  - name: Galileo Collector
+  - name: Galileo Collector http check
     url: http://HOST:10002/health
     timeout: 5
 
