@@ -1,0 +1,9 @@
+init_config:
+
+docker_images:
+  - galileo-frontend
+
+instances:
+  - nginx_status_url: http://HOST:10003/status
+    tags:
+      - application:galileo-frontend

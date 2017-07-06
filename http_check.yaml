@@ -2,6 +2,9 @@ init_config:
 
 docker_images:
   - galileo-frontend
+  - galileo-api
+  - galileo-collector
+  - mashape-id
 
 init_config:
 
